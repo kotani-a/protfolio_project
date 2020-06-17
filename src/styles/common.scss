@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+
+$keyGray: #999999;
+$keyWhite: #fefefe;
+$keyOrange: #F2A11D;
+
+$listHeight: 30px;
+
+$breakpoints: (
+  'xs': 'screen and (min-width: 360px)',
+  'sm': 'screen and (min-width: 400px)',
+  'min488': 'screen and (min-width: 488px)',
+  'md': 'screen and (min-width: 768px)',
+  'lg': 'screen and (min-width: 1000px)',
+  'xl': 'screen and (min-width: 1200px)',
+) !default;
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+ 
+  #{$property}: $value;
+}
+
+@mixin OswaldDifference {
+  mix-blend-mode: difference;
+  color: $keyGray;
+  font-family: 'Oswald', sans-serif;
+}
+
+@mixin OswaldGray {
+  color: $keyGray;
+  font-family: 'Oswald', sans-serif;
+}
+
+@mixin OswaldWhite {
+  color: $keyWhite;
+  font-family: 'Oswald', sans-serif;
+}
+
+@mixin  whiteRhombusFull {
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  background-color: $keyWhite;
+  border: 1px solid $keyWhite;
+  box-sizing: border-box;
+}
+
+@mixin whiteRhombusEmpty {
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  border: 1px solid $keyWhite;
+  box-sizing: border-box;
+}
+
+@mixin smallInfo {
+  height: 24px;
+  padding: 0 4px;
+  line-height: 24px;
+  font-size: 16px;
+}
+
+@mixin whiteRow {
+  width: 10px;
+  height: 1px;
+  margin-right: 4px;
+  background-color: $keyWhite;
+}
+
+@mixin page {
+  position: relative;
+  background-color: $keyWhite;
+  border: $keyGray 4px solid;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
