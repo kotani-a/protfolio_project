@@ -520,7 +520,7 @@ export default {
       width: auto;
       height: 52px;
       padding: 0;
-      z-index: 10;
+      z-index: 5;
       &.descending {
         &:hover {
           .svgImg {
