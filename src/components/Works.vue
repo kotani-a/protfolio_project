@@ -320,7 +320,7 @@ export default {
     },
     scrollPage (e) {
       if (window.innerWidth < 488) {
-        this.sortFade = window.pageYOffset > 0 ? 'fadaOut' : 'fadeIn'
+        this.sortFade = window.pageYOffset > 0 ? 'fadeOut' : 'fadeIn'
       }
     }
   }
