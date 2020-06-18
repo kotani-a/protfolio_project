@@ -77,7 +77,9 @@
         </div>
       </div>
     </div>
-    <div class="sortWrap">
+    <div
+      v-bind:class="`sortWrap ${sortFade}`"
+    >
       <button
         class="button sort"
         v-bind:class="descending ? 'descending' : 'ascending'"
@@ -251,7 +253,8 @@ export default {
       modalOpen: false,
       modalOpenKey: -1,
       modalType: '',
-      descending: false
+      descending: false,
+      sortFade: ''
     }
   },
   created () {
@@ -273,6 +276,7 @@ export default {
       if (a.date > b.date) return -1
       return 0
     })
+    window.addEventListener('scroll', this.scrollPage)
   },
   methods: {
     openModal (key, type) {
@@ -313,6 +317,11 @@ export default {
         })
       }
       this.descending = !this.descending
+    },
+    scrollPage (e) {
+      if (window.innerWidth < 488) {
+        this.sortFade = window.pageYOffset > 0 ? 'fadaOut' : 'fadeIn'
+      }
     }
   }
 }
@@ -516,6 +525,13 @@ export default {
     position: absolute;
     justify-content: flex-end;
     display: flex;
+    transition: opacity 0.5s;
+    &.fadeOut {
+      opacity: 0;
+    }
+    &.fadeIn {
+      opacity: 1;
+    }
     .sort {
       width: auto;
       height: 52px;
