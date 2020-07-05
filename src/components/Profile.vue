@@ -427,7 +427,7 @@ export default {
         }
         .historyText {
           animation-name: fadeInDelay;
-          animation-duration: 2s;
+          animation-duration: 1.5s;
           color: $keyWhite;
           .historyDate {
             width: 100%;
