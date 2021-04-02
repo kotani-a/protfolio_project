@@ -9,7 +9,7 @@
       <globalNav nowPage="Profile" />
       <div class="topInfo">
         <div class="nameImg" />
-        <span class="atDate">at 6 May. 2020</span>
+        <span class="atDate">at 29 Mar. 2021</span>
       </div>
       <h2 class="head2">History</h2>
       <ol class="historyList">
@@ -117,12 +117,12 @@ export default {
         {
           key: 1,
           date: 'Apr. 2012',
-          content: '千葉工業大学　入学'
+          content: '私立工業大学　入学'
         },
         {
           key: 2,
           date: 'Apr. 2016',
-          content: '株式会社東京ダイヤエアコン　入社'
+          content: '空調機器会社　入社'
         },
         {
           key: 3,
@@ -132,7 +132,7 @@ export default {
         {
           key: 4,
           date: 'Nov. 2017',
-          content: '株式会社blue　入社'
+          content: 'IT・WEB系会社　入社'
         }
       ],
       skillList: [
@@ -191,6 +191,20 @@ export default {
           score: 3,
           max: 5,
           content: '基本的な操作はできます。TortoiseGitなどを使用して操作したり、直接コマンドで操作したりできますが、ブランチ管理などは管理者の方に任せることが多いです。Githubでコード管理して開発を行っているプロジェクトに参加した経験もあります。'
+        },
+        {
+          key: 8,
+          name: 'AWS',
+          score: 2,
+          max: 5,
+          content: '業務での使用経験はありません。Amplify,API Gateway,Lambda,DynamoDBを少し触れたことがあります。DBからAPIでデータを取ってきて表示させる簡単なものを作ったことがあります。'
+        },
+        {
+          key: 9,
+          name: 'Firebase',
+          score: 2,
+          max: 5,
+          content: '業務での使用経験はありません。ホスティング、データベース、ストレージ、グーグル認証などの機能を少し触れたことがあります。これらの機能を使って簡単なチャットアプリを作成したことがあります。'
         }
       ],
       skillNoteHeadInt: 'Summary',

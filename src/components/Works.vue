@@ -10,8 +10,11 @@
         class="modalMain pictureModal"
         v-if="modalType === 'picture'"
         v-bind:class="modalOpen ? 'open' : ''"
+        :style="{ backgroundImage: 'url(' + workList[modalOpenKey].imgSrc + ')' }"
       >
-        <div class="modalColseWrap">
+        <div
+          class="modalButtonWrap"
+          v-bind:class="pictureModalDescriptionOpen ? 'open' : 'close'">
           <button
             class="modalClose button"
             v-on:click="closeModal"
@@ -20,21 +23,25 @@
               class="svgImg"
               src="../assets/close.svg" />
           </button>
+          <button
+            class="showDescription button"
+            v-on:click="modalDescription"
+          >
+            <img
+              class="svgImg"
+              src="../assets/expand.svg" />
+          </button>
         </div>
-        <div class="imgWrap">
-          <img
-            class="modalImage"
-            v-bind:src="`${workList[modalOpenKey].imgSrc}`"
-            alt="modaImage" />
-        </div>
-        <div class="modalContet">
+        <div
+          class="modalContet"
+          v-bind:class="pictureModalDescriptionOpen ? 'open' : 'close'">
           <h2 class="modalTitle">{{ workList[modalOpenKey].title }}</h2>
           <h3 class="modalSubTitle">date</h3>
           <p class="modalSubContent">{{ workList[modalOpenKey].displayDate }}</p>
           <h3 class="modalSubTitle">language/library/tool</h3>
           <p class="modalSubContent">
-            {{ workList[modalOpenKey].language }}
-            {{ workList[modalOpenKey].library }}
+            {{ workList[modalOpenKey].language ? `${workList[modalOpenKey].language}, ` : null }}
+            {{ workList[modalOpenKey].library ? `${workList[modalOpenKey].library}, ` : null }}
             {{ workList[modalOpenKey].tool }}
           </p>
           <h3 class="modalSubTitle">Description</h3>
@@ -57,19 +64,17 @@
           </button>
           <h2 class="modalTitle">{{ workList[modalOpenKey].title }}</h2>
         </header>
-        <div class="imgWrap">
-          <img
-            class="modalImage"
-            v-bind:src="`${workList[modalOpenKey].imgSrc}`"
-            alt="modaImage" />
+        <div
+          class="imgWrap"
+          :style="{ backgroundImage: 'url(' + workList[modalOpenKey].imgSrc + ')' }">
         </div>
         <div class="modalContet">
           <h3 class="modalSubTitle">date</h3>
           <p class="modalSubContent">{{ workList[modalOpenKey].displayDate }}</p>
           <h3 class="modalSubTitle">language/library/tool</h3>
           <p class="modalSubContent">
-            {{ workList[modalOpenKey].language }}
-            {{ workList[modalOpenKey].library }}
+            {{ workList[modalOpenKey].language ? `${workList[modalOpenKey].language}, ` : null }}
+            {{ workList[modalOpenKey].library ? `${workList[modalOpenKey].library}, ` : null }}
             {{ workList[modalOpenKey].tool }}
           </p>
           <h3 class="modalSubTitle">Description</h3>
@@ -161,6 +166,21 @@ export default {
       workList: [
         {
           key: 0,
+          title: 'V.C.M.',
+          description: '趣味の某スマホゲームの装備品についてまとめたページです。',
+          detailedDescription: '某スマホゲームの装備品(カード)をテーブルでまとめて表示したものです。DBからAPIでデータを取ってきて表示してます。ソートや簡単なフィルター機能などがついてます。',
+          date: '2021-03-30',
+          displayDate: 'Mar. 2021',
+          type: 'web',
+          imgSrc: require('@/assets/vcm6.jpg'),
+          url: 'https://master.daz6g0qp4yxzj.amplifyapp.com',
+          library: 'React.js',
+          language: 'Jave Script, HTML, CSS',
+          tool: 'AWS(Amplify, API Gateway, Lambda, DynamoDB), Photoshop',
+          isExpand: false
+        },
+        {
+          key: 1,
           title: 'Protfolio Site',
           description: 'このサイトです。私のポートフォリオサイトになります。',
           detailedDescription: 'このサイトです。Vue.jsを使用して作成しました。スタイル指定方法はscssを使用しております。レスポンシブ対応は大丈夫かと思いますが、appleの製品が手元にないので、iOS、safariでの確認はできておりません。',
@@ -170,27 +190,27 @@ export default {
           imgSrc: require('@/assets/protfolioProject.jpg'),
           url: '',
           library: 'Vue.js',
-          language: 'SCSS',
+          language: 'Jave Script, HTML, SCSS',
           tool: 'Photoshop',
           isExpand: false
         },
         {
-          key: 1,
+          key: 2,
           title: 'RF chat',
           description: 'React.jsとfirebaseを使用して作成した簡単なチャットアプリです。',
           detailedDescription: `React.jsとfirebaseを使用して作成した簡単なチャットアプリです。簡単とはいっても、そこそこ機能はついていまして、主に次のようなものがあります。\n・firebaseの機能を用いたGoogleアカウントもしくは匿名でのログイン(最初の画面の右側のボタンが匿名でのログイン、左側のボタンがgoogleでのログイン)\n・コメント、画像の送信\n・自分が投稿したコメントの削除、編集\n・自分が投稿した画像の削除\n・他人が投稿したコメント、画像にgoodを送る\n・チャット画面右上の矢印アイコンから一番上もしくは一番下にスクロール位置を指定する(画面幅がPCサイズ程ある時のみ)\n・チャット画面右上のカレンダーアイコンから日付からスクロール位置を指定する(画面幅がPCサイズ程ある時のみ)\n\n※公序良俗に反する内容でなければ試しに書き込みなどして頂いて大丈夫です。`,
           date: '2019-12-31',
-          displayDate: 'Des. 2019',
+          displayDate: 'Dec. 2019',
           type: 'web',
           imgSrc: require('@/assets/main_image.jpg'),
           url: 'https://myfirebasechatapp-efb13.firebaseapp.com/',
           library: 'React.js',
-          language: 'CSS',
-          tool: 'Firebase',
+          language: 'Jave Script, HTML, CSS',
+          tool: 'Firebase, Photoshop',
           isExpand: false
         },
         {
-          key: 2,
+          key: 3,
           title: 'N.B.',
           description: 'プリント用紙に人を書き、その紙をスキャンして、Photoshopで加工したものです。',
           detailedDescription: 'プリント用紙に人を書き、その紙をスキャンして、Photoshopで加工したものです。ちなみに、タイトルに特に意味はないです。その時に聞いていた音楽のタイトルを省略したものだと思います。',
@@ -205,7 +225,7 @@ export default {
           isExpand: false
         },
         {
-          key: 3,
+          key: 4,
           title: 'Test Protfolio Site',
           description: '職業訓練時に作成したサイトです。架空の人物を見立てて、作成したものになります。',
           detailedDescription: '架空の人物を見立てて、作成したものです。この架空人物の作品はすべてライセンスフリーのものを載せています。レスポンシブ対応をしておりますが、こちらもappleの製品が手元にないので、iOS、safariでの確認はできておりません。',
@@ -215,12 +235,12 @@ export default {
           imgSrc: require('@/assets/testProtfolio.jpg'),
           url: 'http://cca11.webcrow.jp/index.html',
           library: 'jQuery',
-          language: 'HTML CSS',
+          language: 'HTML, CSS',
           tool: 'Photoshop',
           isExpand: false
         },
         {
-          key: 4,
+          key: 5,
           title: 'Sato Nishiki',
           description: '職業訓練時に作成したイメージ画像です。さくらんぼの佐藤錦をイメージした画像です',
           detailedDescription: '職業訓練時の題材で、さくらんぼの佐藤錦をイメージした画像です。佐藤錦の和風な感じを残しつつ、色んな方に知って頂こうと思い作ったものです',
@@ -235,7 +255,7 @@ export default {
           isExpand: false
         },
         {
-          key: 5,
+          key: 6,
           title: 'anti',
           description: 'Photoshopではなく、GIMPというフリーソフトを使って描いた絵です。',
           detailedDescription: 'GIMPで描いただいぶ前に描いた絵です。何を思って描いた絵かは想像にお任せします。',
@@ -254,7 +274,8 @@ export default {
       modalOpenKey: -1,
       modalType: '',
       descending: false,
-      sortFade: ''
+      sortFade: '',
+      pictureModalDescriptionOpen: false
     }
   },
   created () {
@@ -299,6 +320,7 @@ export default {
     closeModal () {
       this.modalOpen = false
       this.modalOpenKey = -1
+      this.pictureModalDescriptionOpen = false
     },
     sortList () {
       if (this.descending) {
@@ -322,6 +344,9 @@ export default {
       if (window.innerWidth < 488) {
         this.sortFade = window.pageYOffset > 0 ? 'fadeOut' : 'fadeIn'
       }
+    },
+    modalDescription () {
+      this.pictureModalDescriptionOpen = !this.pictureModalDescriptionOpen
     }
   }
 }
@@ -461,6 +486,10 @@ export default {
       .imgWrap {
         width: 450px;
         max-width: 100%;
+        min-height: 278px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left 8px top 50%;
         .modalImage {
           max-width: 100%;
           border-bottom: 4px solid $keyOrange;
@@ -469,35 +498,65 @@ export default {
     }
     .pictureModal {
       flex-direction: column;
-      @include mq(lg) {
-        flex-direction: row;
+      justify-content: flex-end;
+      background-size: contain;
+      background-repeat: no-repeat;
+      overflow: hidden;
+
+      max-width: 100%;
+      width: 300px;
+      height: 424px;
+
+      @include mq(md) {
+        width: 450px;
+        max-width: 100%;
+        height: 636px;
       }
-      .modalColseWrap {
-        width: 100%;
-        height: 32px;
-        position: fixed;
-        @include mq(lg) {
-          width: 0px;
-          height: 0px;
-          position: static;
-        }
+      .modalButtonWrap {
         .modalClose {
-          position: static;
-          @include mq(lg) {
-            position: absolute;
+          position: absolute;
+          top: 0;
+          right: 0;
+          background-color: $keyGray;
+        }
+        .showDescription {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          background-color: $keyGray;
+          .svgImg {
+            transition: all 0.5s;
+            transform: rotate(180deg);
+          }
+        }
+        &.close {
+          .svgImg {
+            transform: rotate(0deg);
           }
         }
       }
       .modalContet {
-        width: 450px;
-        max-width: 100%;
-        height: 636px;
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        background-color: $keyGray;
+        position: absolute;
+        transition: all 1s;
+        &.open {
+          bottom: 0;
+        }
+        &.close {
+          bottom: -100%;
+        }
       }
       .imgWrap {
         width: 450px;
         max-width: 100%;
         height: 636px;
         display: flex;
+        background-size: contain;
+        background-repeat: no-repeat;
         .modalImage {
           width: 100%;
           max-width: 100%;
