@@ -110,108 +110,164 @@ export default {
     return {
       historyList: [
         {
-          key: 0,
+          key: '0',
           date: 'Feb. 1994',
           content: '誕生'
         },
         {
-          key: 1,
+          key: '1',
           date: 'Apr. 2012',
-          content: '私立工業大学　入学'
+          content: '私立工業大学 入学'
         },
         {
-          key: 2,
+          key: '2',
           date: 'Apr. 2016',
-          content: '空調機器会社　入社'
+          content: '空調機器会社 入社'
         },
         {
-          key: 3,
+          key: '3',
           date: 'Apr. 2017',
-          content: '職業訓練校(Webクリエイター養成科)　入校'
+          content: '職業訓練校(Webクリエイター養成科) 入校'
         },
         {
-          key: 4,
+          key: '4',
           date: 'Nov. 2017',
-          content: 'IT・WEB系会社　入社'
+          content: 'IT・WEB系会社(東京都) 入社',
+          history: [
+            {
+              key: '4-1',
+              date: 'Nov. 2017',
+              content: '研修 開始'
+            },
+            {
+              key: '4-2',
+              date: 'Aug. 2018',
+              content: '地方自治体窓口用PDF開発案件 参入'
+            },
+            {
+              key: '4-3',
+              date: 'Mar. 2019',
+              content: '薬品市場分析ツール開発案件 参入'
+            },
+            {
+              key: '4-4',
+              date: 'Sep. 2019',
+              content: '気象データ情報アプリ開発案件 参入'
+            },
+            {
+              key: '4-5',
+              date: 'Apr. 2020',
+              content: '新聞社CMSアプリ開発案件 参入'
+            }
+          ]
+        },
+        {
+          key: '5',
+          date: 'Aug. 2021',
+          content: 'IT・WEB系会社(千葉) 入社',
+          history: [
+            {
+              key: '5-1',
+              date: 'Aug. 2021',
+              content: '生物図鑑SNSアプリ開発案件 参入'
+            },
+            {
+              key: '5-2',
+              date: 'Oct. 2021',
+              content: '保険会社支払い画面開発案件 参入'
+            },
+            {
+              key: '5-3',
+              date: 'Feb. 2022',
+              content: '電子書籍WEBサービス開発案件 参入'
+            }
+          ]
         }
       ],
       skillList: [
         {
-          key: 0,
+          key: '0',
           name: 'HTML',
           score: 4,
           max: 5,
-          content: '基本的なHTMLは問題なく扱えると思ってます。慣れないタグなどについては少し調べる場合があるかもしれません。また、古いHTMLについては詳しくありありません。'
+          content: '基本的なHTML5は問題なく扱えます。慣れないタグや属性などについては少し調べる場合があります。また、HTML5より前の古いHTMLやXMLについては詳しくありありません。'
         },
         {
-          key: 1,
+          key: '1',
           name: 'CSS',
           score: 4,
           max: 5,
-          content: '基本的なCSSであれば問題なく扱えると思ってます。HTML同様、慣れないプロパティなどについては少し調べる場合があるかもしれません。SCSSなどのCSSプリプロセッサについては勉強中です。ちなみに、このサイトはSCSSを用いて作成しました。'
+          content: '基本的なCSSであれば問題なく扱えます。HTML同様、慣れないプロパティなどについては少し調べる場合があります。SCSSなどのCSSプリプロセッサについても基本的なところはついては理解しています。ちなみに、このサイトはSCSSを用いて作成しました。'
         },
         {
-          key: 2,
+          key: '2',
           name: 'Jave Script',
-          score: 3,
+          score: 4,
           max: 5,
-          content: '基本的なことは身に付いてきたと思っています。jQueryはあまり使ってきませんでしたが、業務ではReact.jsやvue.jsなどモダンなフレームワークを用いたフロントエンドの開発経験もあります。ちなみに、このサイトはvue.jsを用いて作成しました。'
+          content: '基本的なJava Scriptであれば問題なく扱えます。業務ではReact.jsやVue.jsなどモダンなフレームワークを用いたフロントエンドの開発経験もあります。ちなみに、このサイトはvue.jsを用いて作成しました。'
         },
         {
-          key: 3,
+          key: '3',
           name: 'PHP',
           score: 1,
           max: 5,
           content: '研修で少し触ったぐらいで経験や知識はあまりないです。その際はローカル環境にテーブルを作成し、そこからのデータを扱う際にPHPを使用しました。'
         },
         {
-          key: 4,
+          key: '4',
           name: 'SQL',
           score: 1,
           max: 5,
           content: '研修で少し触ったぐらいで経験や知識はあまりないです。基本的なテーブルの作成、削除やレコードの挿入、削除、更新などを行ったことはあります。'
         },
         {
-          key: 5,
+          key: '5',
           name: 'Photoshop',
           score: 3,
           max: 5,
-          content: '基本的な操作はできます。ですが、たまにしか使用しないので、素早く操作したり、テクニックなどはあまり身についていないと思います。'
+          content: '基本的な操作はできます。ですが、たまにしか使用しないので、素早く操作したり、テクニックなどはあまり身についていないです。'
         },
         {
-          key: 6,
+          key: '6',
           name: 'Illustrator',
           score: 2,
           max: 5,
           content: '職業訓練校で基本的な操作を教わったきり使用していないので忘れかけてます。'
         },
         {
-          key: 7,
+          key: '7',
           name: 'Git',
-          score: 3,
+          score: 4,
           max: 5,
-          content: '基本的な操作はできます。TortoiseGitなどを使用して操作したり、直接コマンドで操作したりできますが、ブランチ管理などは管理者の方に任せることが多いです。Githubでコード管理して開発を行っているプロジェクトに参加した経験もあります。'
+          content: '基本的な操作はでき、考えなどは理解しています。TortoiseGitなどを使用して操作したり、直接コマンドで操作したり出来ます。複雑な操作や設定は少し手間取ってしまうかもしれません。また、Github上の基本的な操作も行えます。'
         },
         {
-          key: 8,
+          key: '8',
           name: 'AWS',
           score: 2,
           max: 5,
-          content: '業務での使用経験はありません。Amplify,API Gateway,Lambda,DynamoDBを少し触れたことがあります。DBからAPIでデータを取ってきて表示させる簡単なものを作ったことがあります。'
+          content: '業務での使用経験はありません。Amplify,API Gateway,Lambda,DynamoDB,S3を少し触れたことがあります。DBからのデータを取得するAPIの作成やAmplifyを用いたホスティングの経験があります。'
         },
         {
-          key: 9,
+          key: '9',
           name: 'Firebase',
           score: 2,
           max: 5,
           content: '業務での使用経験はありません。ホスティング、データベース、ストレージ、グーグル認証などの機能を少し触れたことがあります。これらの機能を使って簡単なチャットアプリを作成したことがあります。'
+        },
+        {
+          key: '10',
+          name: 'GCP',
+          score: 1,
+          max: 5,
+          content: 'Google Cloud Platformのことです。業務での使用経験はありません。Google Sheets APIを使用してスプレッドシートのデータを取得したことがあります。'
         }
       ],
       skillNoteHeadInt: 'Summary',
       skillNoteHead: '',
       skillNoteScore: '',
       skillNoteScoreInt: '',
-      skillNoteContentInt: 'フロントエンドの開発などの業務経験があります。今後、フロントエンドにこだわらずバックエンドやデザインなど幅広く経験を積んでいきたいと考えております。',
+      skillNoteContentInt: '主にフロントエンドの開発業務経験があります。今後、フロントエンドにこだわらずバックエンドやデザインなど幅広く経験を積んでいきたいと考えております。',
       skillNoteContent: '',
       isListHover: false,
       comment: '鹿児島県で生まれたらしいです。今は千葉県に住んでます。趣味は映画を見たり、漫画を読んだり、ゲームをしたりと家でなにかしてることが多いです。"stay home"得意です。色んな物事に対してコツコツ地道に頑張っていこうかと思います。',
