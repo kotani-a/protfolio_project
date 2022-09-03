@@ -147,12 +147,12 @@ export default {
             {
               key: '4-3',
               date: 'Mar. 2019',
-              content: '薬品市場分析ツール開発案件 参入'
+              content: '薬品市場分析Webアプリ開発案件 参入'
             },
             {
               key: '4-4',
               date: 'Sep. 2019',
-              content: '気象データ情報アプリ開発案件 参入'
+              content: '気象データ情報Webアプリ開発案件 参入'
             },
             {
               key: '4-5',
@@ -169,17 +169,17 @@ export default {
             {
               key: '5-1',
               date: 'Aug. 2021',
-              content: '生物図鑑SNSアプリ開発案件 参入'
+              content: '生物図鑑Webアプリ開発案件 参入'
             },
             {
               key: '5-2',
               date: 'Oct. 2021',
-              content: '保険会社支払い画面開発案件 参入'
+              content: '保険会社Web支払い画面開発案件 参入'
             },
             {
               key: '5-3',
               date: 'Feb. 2022',
-              content: '電子書籍WEBサービス開発案件 参入'
+              content: '電子書籍Webサービス開発案件 参入'
             }
           ]
         }
@@ -239,7 +239,7 @@ export default {
           name: 'Git',
           score: 4,
           max: 5,
-          content: '基本的な操作はでき、考えなどは理解しています。TortoiseGitなどを使用して操作したり、直接コマンドで操作したり出来ます。複雑な操作や設定は少し手間取ってしまうかもしれません。また、Github上の基本的な操作も行えます。'
+          content: '基本的な操作はでき、基本的な概念も理解しています。TortoiseGitなどを使用して操作したり、直接コマンドで操作したり出来ます。複雑な操作や設定は少し手間取ってしまうかもしれません。また、Github上の基本的な操作も行えます。'
         },
         {
           key: '8',
