@@ -105,25 +105,25 @@
 			]
 		},
 		{
-      "key": "5",
+      "key": "7",
       "date": "Aug. 2021",
       "content": "IT・WEB系会社(千葉) 入社",
 			"hidden": false,
       "history": [
 				{
-          "key": "5-1",
+          "key": "7-1",
           "date": "Aug. 2021",
           "content": "生物図鑑のWebアプリ開発案件 参入",
           "comment": "Nuxt.js現場。自分以外は京都におり、コロナ禍にふさわしい完全リモートで業務。"
 				},
 				{
-          "key": "5-2",
+          "key": "7-2",
           "date": "Oct. 2021",
           "content": "保険会社Web支払い画面開発案件 参入",
           "comment": "React.js現場。火が上がりそうで上がらなかった現場。"
 				},
 				{
-          "key": "5-3",
+          "key": "7-3",
           "date": "Feb. 2022",
           "content": "電子書籍Webサービス開発案件 参入",
           "comment": "React.js現場。React HooksやType ScriptなどモダンなReact.jsの使い方を知る。"
