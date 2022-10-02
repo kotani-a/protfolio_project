@@ -1,0 +1,78 @@
+{
+	"historyList": [
+		{
+      "key": "0",
+      "date": "Feb. 1994",
+      "content": "誕生"
+		},
+		{
+      "key": "1",
+      "date": "Apr. 2012",
+      "content": "私立工業大学 入学"
+		},
+		{
+      "key": "2",
+      "date": "Apr. 2016",
+      "content": "空調機器会社 入社"
+		},
+		{
+      "key": "3",
+      "date": "Apr. 2017",
+      "content": "職業訓練校(Webクリエイター養成科) 入校"
+		},
+		{
+      "key": "4",
+      "date": "Nov. 2017",
+      "content": "IT・WEB系会社(東京都) 入社",
+      "history": [
+				{
+          "key": "4-1",
+          "date": "Nov. 2017",
+          "content": "研修 開始"
+				},
+				{
+          "key": "4-2",
+          "date": "Aug. 2018",
+          "content": "地方自治体窓口用PDF開発案件 参入"
+				},
+				{
+          "key": "4-3",
+          "date": "Mar. 2019",
+          "content": "薬品市場分析Webアプリ開発案件 参入"
+				},
+				{
+          "key": "4-4",
+          "date": "Sep. 2019",
+          "content": "気象データ情報Webアプリ開発案件 参入"
+				},
+				{
+          "key": "4-5",
+          "date": "Apr. 2020",
+          "content": "新聞社CMSアプリ開発案件 参入"
+				}
+			]
+		},
+		{
+      "key": "5",
+      "date": "Aug. 2021",
+      "content": "IT・WEB系会社(千葉) 入社",
+      "history": [
+				{
+          "key": "5-1",
+          "date": "Aug. 2021",
+          "content": "生物図鑑Webアプリ開発案件 参入"
+				},
+				{
+          "key": "5-2",
+          "date": "Oct. 2021",
+          "content": "保険会社Web支払い画面開発案件 参入"
+				},
+				{
+          "key": "5-3",
+          "date": "Feb. 2022",
+          "content": "電子書籍Webサービス開発案件 参入"
+				}
+			]
+		}
+	]
+}
