@@ -277,7 +277,7 @@ export default {
   methods: {
     skillListHover (itemKey) {
       this.skillNoteHead = this.skillList[itemKey].name
-      this.skillNoteScore = `自己評価: ${this.skillList[itemKey].score}/${this.skillList[itemKey].max}`
+      this.skillNoteScore = `(自己評価: ${this.skillList[itemKey].score}/${this.skillList[itemKey].max})`
       this.skillNoteContent = this.skillList[itemKey].content
       this.isListHover = true
     },
