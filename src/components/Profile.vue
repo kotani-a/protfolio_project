@@ -11,7 +11,13 @@
         <div class="nameImg" />
         <span class="atDate">at 29 Mar. 2021</span>
       </div>
-      <h2 class="head2">History</h2>
+      <h2 class="head2">
+        <span>History</span>
+        <router-link to="historyDetail">
+          <span class="detail">Detail</span>
+          <span class="triangle"></span>
+        </router-link>
+      </h2>
       <ol class="historyList">
         <li
           class="historyItem"
@@ -441,6 +447,26 @@ export default {
       vertical-align: middle;
       display: flex;
       align-items: center;
+      a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: $keyGray;
+        margin-left: auto;
+        .detail {
+          font-size: 20px;
+          margin-right: 4px;
+        }
+        .triangle {
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-top: 10px solid transparent;
+          border-bottom: 10px solid transparent;
+          border-left: 17px solid $keyGray;
+          border-right: 0;
+        }
+      }
       &::before {
         content: '';
         display: inline-block;
