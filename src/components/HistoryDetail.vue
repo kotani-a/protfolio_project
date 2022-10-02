@@ -251,6 +251,7 @@ export default {
           animation-name: commentBeforeWidthUp;
           animation-duration: 2.5s;
           animation-fill-mode: forwards;
+          animation-delay: 1s;
           position: absolute;
           content: '';
           display: inline-block;
