@@ -9,7 +9,7 @@
       <globalNav nowPage="Profile" />
       <div class="topInfo">
         <div class="nameImg" />
-        <span class="atDate">at 29 Mar. 2021</span>
+        <span class="atDate">at 2 Oct. 2022</span>
       </div>
       <h2 class="head2">
         <span>History</span>
@@ -116,7 +116,7 @@ export default {
   components: { globalNav },
   data () {
     return {
-      historyList: historyJson.historyList,
+      historyList: historyJson.historyList.filter(item => !item.hidden),
       skillList: skillJson.skillList,
       skillNoteHeadInt: 'Summary',
       skillNoteHead: '',
@@ -171,21 +171,24 @@ export default {
 @keyframes heightUp {
   0% { height: 0px; }
   50% { height: 0px; }
-  99% { height: $listHeight * 5; }
+  // $listHeight * リストアイテムの数
+  99% { height: $listHeight * 6; }
   100% { height: auto; }
 }
 
 @keyframes heightUpMd {
   0% { height: 0px; }
   50% { height: 0px; }
-  99% { height: $listHeight * 2 * 5; }
+  // $listHeight * 2(スマホ幅は二段に分けるため) * リストアイテムの数
+  99% { height: $listHeight * 2 * 6; }
   100% { height: auto; }
 }
 
 @keyframes heightUpS {
   0% { height: 0px; }
   50% { height: 0px; }
-  99% { height: $listHeight * 8; }
+  // $listHeight * リストアイテムの数
+  99% { height: $listHeight * 11; }
   100% { height: auto; }
 }
 
@@ -237,6 +240,12 @@ export default {
     text-indent: 0px;
     opacity: 1;
   }
+}
+
+@keyframes shakingMove {
+  0% { transform: translateX(0px); }
+  50% { transform: translateX(2px); }
+  100% { transform: translateX(0px); }
 }
 
 .page {
@@ -302,6 +311,13 @@ export default {
         text-decoration: none;
         color: $keyGray;
         margin-left: auto;
+        &:hover {
+          .triangle {
+            animation-name: shakingMove;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+          }
+        }
         .detail {
           font-size: 20px;
           margin-right: 4px;
