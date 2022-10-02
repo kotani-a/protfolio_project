@@ -67,7 +67,7 @@ export default {
   0% { height: 0px; }
   50% { height: 0px; }
   // $listHeight * 2(スマホ幅は二段に分けるため) * リストアイテムの数
-  99% { height: $listHeight * 2 * 14; }
+  99% { height: $listHeight * 2 * 37; }
   100% { height: auto; }
 }
 
@@ -75,7 +75,7 @@ export default {
   0% { height: 0px; }
   50% { height: 0px; }
   // $listHeight * リストアイテムの数
-  99% { height: $listHeight * 14; }
+  99% { height: $listHeight * 37; }
   100% { height: auto; }
 }
 
@@ -83,6 +83,15 @@ export default {
   0% { width: 0px; }
   50% { width: 0px; }
   100% { width: 15px; }
+}
+
+@keyframes commentBeforeWidthUp {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 @keyframes childListWidthUp {
@@ -100,6 +109,7 @@ export default {
 .page {
   @include page;
   background-color: $keyGray;
+  border: none;
   .main {
     padding-top: 80px;
   }
@@ -129,8 +139,9 @@ export default {
     animation-name: heightUpMd;
     @include mq(md) {
       animation-name: heightUp;
+      animation-duration: 1s;
     }
-    animation-duration: 1s;
+    animation-duration: 1.5s;
     height: auto;
     padding: 0 8px;
     margin: 15px 0;
@@ -152,7 +163,7 @@ export default {
           .row {
             @include whiteRow;
             animation-name: childListWidthUp;
-            animation-duration: 1.5s;
+            animation-duration: 1.7s;
             width: 45px;
           }
         }
@@ -220,23 +231,30 @@ export default {
         }
       }
       .comment {
-        animation-name: fade;
-        animation-duration: 1.5s;
         color: $keyWhite;
         padding-left: 25px;
         height: 30px;
         border-left: 1px solid $keyWhite;
-        // vertical-align: top;
         font-size: 12px;
         line-height: 1.2;
+        position: relative;
+        &::before {
+          animation-name: commentBeforeWidthUp;
+          animation-duration: 2.5s;
+          animation-fill-mode: forwards;
+          position: absolute;
+          content: '';
+          display: inline-block;
+          width: 100%;
+          height: 30px;
+          background-color: $keyGray;
+        }
         @include mq(md) {
           font-size: 14px;
           line-height: 1.5;
-          // vertical-align: middle;
         }
       }
       &:first-child .itemTitle .col {
-        // height: $listHeight;
         height: 25px;
         @include mq(md) {
           height: $listHeight / 2;
