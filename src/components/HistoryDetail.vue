@@ -79,6 +79,12 @@ export default {
   100% { height: auto; }
 }
 
+@keyframes pageHeightUp {
+  0% { height: 0%; }
+  99% { height: 100%; }
+  100% { height: auto; }
+}
+
 @keyframes widthUp {
   0% { width: 0px; }
   50% { width: 0px; }
@@ -110,6 +116,9 @@ export default {
   @include page;
   background-color: $keyGray;
   border: none;
+  animation-name: pageHeightUp;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
   .main {
     padding-top: 80px;
   }
