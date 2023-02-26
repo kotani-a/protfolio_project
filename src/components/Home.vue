@@ -2,10 +2,20 @@
   <div class="page">
     <img src="../assets/titel_A_90.png" class="title" alt="Title" />
     <img src="../assets/name_90.png" class="name" alt="Name" />
-    <div class="box" />
+    <transition
+      appear
+      @enter="boxEnter"
+    >
+      <div class="box" />
+    </transition>
     <div class="border" />
     <div class="greetDiv">
-      <span class="greetHead">Hello, World!<br />Hello, Everyone!</span>
+      <transition
+        appear
+        @enter="greetHeadEnter"
+      >
+        <span class="greetHead">Hello, World!<br />Hello, Everyone!</span>
+      </transition>
       <span class="greet">Welcome! I am akinori kotani.This is My Protfolio Site.</span>
       <nav class="nav">
         <router-link to="/profile" class="link">Profile</router-link>
@@ -16,7 +26,33 @@
 </template>
 
 <script>
-export default { name: 'Home' }
+import {gsap} from 'gsap'
+
+export default {
+  name: 'Home',
+  methods: {
+    boxEnter (el) {
+      gsap.timeline().from(el, {
+        duration: 2,
+        delay: 0.5,
+        height: 1
+      }).from(el, {
+        width: 1,
+        duration: 1
+      })
+    },
+    greetHeadEnter (el) {
+      gsap.from(el, {
+        duration: 2,
+        delay: 1,
+        y: -50,
+        opacity: 0,
+        ease: 'expo.out',
+        color: '#0057A6'
+      })
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -27,35 +63,29 @@ export default { name: 'Home' }
   height: 100%;
   .title {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 25%;
     z-index: 5;
   }
   .name {
-    width: 150px;
+    width: 80px;
     position: absolute;
-    top: 376px;
-    left: 205px;
     z-index: 5;
+    bottom: 0;
   }
   .box {
-    width: 707px;
-    height: 500px;
+    width: 80%;
+    height: 100%;
     background-color: $keyGray;
-    transform: rotate(45deg);
     position: absolute;
-    left: -123px;
-    top: -10px;
   }
   .border {
-    width: 2px;
-    height: 500px;
+    width: 1px;
+    height: 100%;
     background-color: #909090;
     transform: rotate(45deg);
     position: absolute;
     z-index: 5;
-    left: 311px;
-    top: 73px;
+    top: 0;
   }
   .greetDiv {
     margin: auto 0;
