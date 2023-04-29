@@ -24,9 +24,9 @@
       {
          "key": "3",
          "name": "PHP",
-         "score": 1,
+         "score": 2,
          "max": 5,
-         "content": "研修で少し触ったぐらいで経験や知識はあまりないです。その際はローカル環境にテーブルを作成し、そこからのデータを扱う際にPHPを使用しました。"
+         "content": "少し触ったぐらいで経験や知識はあまりないです。ローカル環境にテーブルを作成し、そこからのデータを扱う際にPHPを使用しました。htmlの中にphpを書いたりもしました。"
       },
       {
          "key": "4",
@@ -59,7 +59,7 @@
       {
          "key": "8",
          "name": "AWS",
-         "score": "2",
+         "score": 2,
          "max": 5,
          "content": "業務での使用経験はありません。Amplify,API Gateway,Lambda,DynamoDB,S3を少し触れたことがあります。DBからのデータを取得するAPIの作成やAmplifyを用いたホスティングの経験があります。"
       },
@@ -76,6 +76,13 @@
          "score": 1,
          "max": 5,
          "content": "Google Cloud Platformのことです。業務での使用経験はありません。Google Sheets APIを使用してスプレッドシートのデータを取得したことがあります。"
+      },
+      {
+         "key": "11",
+         "name": "Docker",
+         "score": 1,
+         "max": 5,
+         "content": "概要や基本的なコマンドについては理解してます。dockerfileを設定したりとかはまだ難しそうです。"
       }
   ]
 }

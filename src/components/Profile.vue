@@ -9,7 +9,7 @@
       <globalNav nowPage="Profile" />
       <div class="topInfo">
         <div class="nameImg" />
-        <span class="atDate">at 2 Oct. 2022</span>
+        <span class="atDate">at 2 May. 2023</span>
       </div>
       <h2 class="head2">
         <span>History</span>

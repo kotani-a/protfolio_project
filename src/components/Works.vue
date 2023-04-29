@@ -166,6 +166,21 @@ export default {
       workList: [
         {
           key: 0,
+          title: 'Pikmin List',
+          description: '趣味の某スマホゲームのある要素についてまとめたページです。',
+          detailedDescription: '某スマホゲームのキャラクター？？が身につけてくれる要素をまとめたものです。Next.jsでAPI側も実装していて、要素の追加や簡易的なログイン機能があります。',
+          date: '2022-12-17',
+          displayDate: 'Dec. 2022',
+          type: 'web',
+          imgSrc: require('@/assets/pikmin_list.png'),
+          url: 'https://pikmin-list-18kc469yi-kotani-a.vercel.app/',
+          library: 'Next.js',
+          language: 'Java Script, HTML, CSS',
+          tool: 'Vercel, Mongoose',
+          isExpand: false
+        },
+        {
+          key: 1,
           title: 'Esper Board',
           description: '趣味の某スマホゲームのある要素についてまとめたページです。',
           detailedDescription: '某スマホゲームのある要素(召喚獣)を実際のゲーム画面に似せて作ったものです。Three.jsを用いて画面を直感的に動かせるのが特徴となってます。また、Next.jsを用いてVercelにデプロイしています。',
@@ -176,11 +191,11 @@ export default {
           url: 'https://esper-board.vercel.app/',
           library: 'Next.js, Three.js',
           language: 'Java Script, HTML, CSS',
-          tool: '',
+          tool: 'Vercel',
           isExpand: false
         },
         {
-          key: 1,
+          key: 2,
           title: 'V.C.M.',
           description: '趣味の某スマホゲームの装備品についてまとめたページです。',
           detailedDescription: '某スマホゲームの装備品(カード)をテーブルでまとめて表示したものです。DBからAPIでデータを取ってきて表示してます。ソートや簡単なフィルター機能などがついてます。カードの追加もWeb上で行うことができます。',
@@ -193,21 +208,6 @@ export default {
           language: 'Java Script, HTML, CSS',
           tool: 'AWS(Amplify, API Gateway, Lambda, DynamoDB), Photoshop',
           isExpand: false
-        },
-        {
-          key: 2,
-          title: 'Protfolio Site',
-          description: 'このサイトです。私のポートフォリオサイトになります。',
-          detailedDescription: 'このサイトです。Vue.jsを使用して作成しました。スタイルはscssを使用しております。デプロイはGithub pageを利用しています。レスポンシブ対応もしています。',
-          date: '2020-04-19',
-          displayDate: 'Apr. 2020',
-          type: 'web',
-          imgSrc: require('@/assets/protfolioProject.jpg'),
-          url: '',
-          library: 'Vue.js',
-          language: 'Java Script, HTML, SCSS',
-          tool: 'Photoshop',
-          isExpand: true
         },
         {
           key: 3,
@@ -241,6 +241,21 @@ export default {
         },
         {
           key: 5,
+          title: 'Blue',
+          description: 'なんかエモい雰囲気を出したかった',
+          detailedDescription: 'なんかエモい雰囲気を出したかった。ACIDMANが歌うcolors of the windっていう曲が好きです。',
+          date: '2017-10-15',
+          displayDate: 'Oct. 2017',
+          type: 'picture',
+          imgSrc: require('@/assets/blue_02.jpg'),
+          url: '',
+          library: '',
+          language: '',
+          tool: 'Photoshop',
+          isExpand: false
+        },
+        {
+          key: 6,
           title: 'Test Protfolio Site',
           description: '職業訓練時に作成したサイトです。架空の人物を見立てて、作成したものになります。',
           detailedDescription: '架空の人物を見立てて、作成したものです。この架空人物の作品はすべてライセンスフリーのものを載せています。コンタクトフォームは機能していません。レスポンシブ対応もしています。',
@@ -255,7 +270,7 @@ export default {
           isExpand: false
         },
         {
-          key: 6,
+          key: 7,
           title: 'Sato Nishiki',
           description: '職業訓練時に作成したイメージ画像です。さくらんぼの佐藤錦をイメージした画像です',
           detailedDescription: '職業訓練時の題材で、さくらんぼの佐藤錦をイメージした画像です。佐藤錦の和風な感じを残しつつ、色んな方に知って頂こうと思い作ったものです',
@@ -270,14 +285,44 @@ export default {
           isExpand: false
         },
         {
-          key: 7,
-          title: 'anti',
+          key: 8,
+          title: 'Marlboro',
+          description: '赤マルボロ',
+          detailedDescription: 'タバコのパッケージで一番カッコいいのはアカマルだと信じている。',
+          date: '2017-02-09',
+          displayDate: 'Feb. 2017',
+          type: 'picture',
+          imgSrc: require('@/assets/Marlboro.jpg'),
+          url: '',
+          library: '',
+          language: '',
+          tool: 'Photoshop',
+          isExpand: false
+        },
+        {
+          key: 9,
+          title: 'Anti',
           description: 'GIMPというフリーソフトを使って描いた絵です。',
           detailedDescription: 'GIMPで描いた絵です。意味もなく周りに流されApple製品を使っている人たちはネコさんに噛みつかれます。',
           date: '2015-09-01',
           displayDate: 'Sep. 2015',
           type: 'picture',
           imgSrc: require('@/assets/anti.jpg'),
+          url: '',
+          library: '',
+          language: '',
+          tool: 'GIMP',
+          isExpand: false
+        },
+        {
+          key: 10,
+          title: 'Sabo',
+          description: 'GIMPというフリーソフトを使って描いた絵です。',
+          detailedDescription: 'GIMPで描いた絵です。ワンピースのサボというキャラクターです。',
+          date: '2014-09-09',
+          displayDate: 'Sep. 2014',
+          type: 'picture',
+          imgSrc: require('@/assets/v7_02.jpg'),
           url: '',
           library: '',
           language: '',
