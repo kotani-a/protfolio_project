@@ -54,6 +54,7 @@
         v-bind:class="modalOpen ? 'open' : ''"
       >
         <header class="modalHeader">
+          <h2 class="modalTitle">{{ workList[modalOpenKey].title }}</h2>
           <button
             class="modalClose button"
             v-on:click="closeModal"
@@ -62,7 +63,6 @@
               class="svgImg"
               src="../assets/close.svg" />
           </button>
-          <h2 class="modalTitle">{{ workList[modalOpenKey].title }}</h2>
         </header>
         <div
           class="imgWrap"
@@ -327,6 +327,7 @@ export default {
       position: relative;
       display: flex;
       overflow-y: auto;
+      overscroll-behavior-y: contain;
       &.open {
         animation-name: modalOpen;
         animation-duration: 1s;
@@ -376,8 +377,12 @@ export default {
         position: sticky;
         top: 0;
         background-color: $keyGray;
-        .modalTitle {
-          padding: 8px;
+        display: flex;
+        align-items: center;
+        padding: 8px;
+        .modalClose {
+          position: static;
+          margin-left: auto;
         }
       }
       .modalContet {
@@ -385,12 +390,10 @@ export default {
         max-width: 100%;
       }
       .imgWrap {
-        width: 450px;
-        max-width: 100%;
-        min-height: 278px;
+        min-height: 250px;
         background-repeat: no-repeat;
-        background-size: contain;
-        background-position: left 8px top 50%;
+        background-size: cover;
+        background-position: center center;
         .modalImage {
           max-width: 100%;
           border-bottom: 4px solid $keyOrange;
@@ -400,7 +403,7 @@ export default {
     .pictureModal {
       flex-direction: column;
       justify-content: flex-end;
-      background-size: contain;
+      background-size: cover;
       background-repeat: no-repeat;
       overflow: hidden;
 
